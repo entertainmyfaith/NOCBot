@@ -1,0 +1,205 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi", "Hello", "Hey", "Good day", "Greetings",
+        "Good morning", "Good afternoon", "How's it going?",
+        "What's up?", "How are you?", "Nice to meet you",
+        "Hello there", "Hi, bot", "Good to see you"
+      ],
+      "responses": [
+        "Hello! My name is NOC Bot. I can help troubleshoot your network issues. Please tell me what problem you're experiencing.",
+        "Hi there! I'm your network assistant. Could you describe the issue you're having with your connection?",
+        "Greetings! I specialize in network troubleshooting. What seems to be the problem today?"
+      ],
+      "speech_rate": "slow"
+    },
+
+    {
+      "tag": "extreme_slow_internet",
+      "patterns": [
+        "Internet is extremely slow", "Unbearably slow speeds",
+        "Barely any bandwidth", "Extreme latency",
+        "Dial-up speeds", "Can't stream anything",
+        "Takes minutes to load pages", "Worse than usual slowness"
+      ],
+      "responses": [
+        "I understand you're experiencing severely degraded speeds. Let's check a few things: First, are you using WiFi or wired connection? If WiFi, could you try connecting via ethernet cable to test?",
+        "Extreme slowdowns often indicate a line issue. Could you check if your modem's signal lights (usually labeled DS/US) are solid green?",
+        "For this level of slowness, let's check your modem's signal levels. Could you access your modem's admin page at 192.168.100.1 and look for the power levels?"
+      ],
+      "speech_rate": "slow"
+    },
+
+    {
+      "tag": "peak_time_slowdown",
+      "patterns": [
+        "Slow during evenings", "Only slow at certain times",
+        "Peak hour slowness", "Slow after work hours",
+        "Congestion issues", "Prime time slowdown",
+        "Network congestion"
+      ],
+      "responses": [
+        "Peak-time slowdowns suggest network congestion. Could you run speed tests at different times and note the pattern?",
+        "For peak hour issues, we should check your bandwidth usage. Are there many users or devices active during these slow periods?",
+        "Time-based slowdowns may require traffic management. Do you have QoS (Quality of Service) settings enabled on your router?"
+      ],
+      "speech_rate": "slow"
+    },
+
+    {
+      "tag": "dns_failure",
+      "patterns": [
+        "DNS isn't working", "Can't resolve addresses",
+        "DNS server error", "Name resolution failed",
+        "DNS lookup failure", "NXDOMAIN errors",
+        "SERVFAIL messages", "DNS_PROBE errors"
+      ],
+      "responses": [
+        "For DNS failures, let's first try flushing your DNS cache. On Windows, open Command Prompt and type 'ipconfig /flushdns'. Did that help?",
+        "DNS issues can often be fixed by changing servers. Could you try using Google DNS (8.8.8.8 and 8.8.4.4) or Cloudflare DNS (1.1.1.1)?",
+        "When DNS fails, try accessing a site by its IP address. For example, try 'ping 142.250.190.46' (Google). Does that work while domain names fail?"
+      ],
+      "speech_rate": "slow"
+    },
+
+    {
+      "tag": "dns_hijacking",
+      "patterns": [
+        "Wrong websites loading", "Redirected to wrong sites",
+        "Suspicious redirects", "Possible DNS hijack",
+        "Browser hijacked", "Malicious redirects",
+        "Phishing warnings"
+      ],
+      "responses": [
+        "This sounds like potential DNS hijacking - a serious security issue. First, please change your router's admin password immediately.",
+        "For suspected DNS hijacking, I recommend scanning all devices for malware and changing all passwords after cleaning.",
+        "Malicious redirects require immediate action. Have you recently installed any suspicious software or browser extensions?"
+      ],
+      "speech_rate": "slow"
+    },
+
+    {
+      "tag": "packet_loss",
+      "patterns": [
+        "High packet loss", "Dropped packets",
+        "Connection unstable", "VoIP breaking up",
+        "Choppy video calls", "Gaming lag spikes",
+        "Intermittent disconnects", "Jittery connection"
+      ],
+      "responses": [
+        "Packet loss affects real-time services. Could you run 'ping -t 8.8.8.8' and check for timeouts or high latency?",
+        "For packet loss, let's check your connection medium. Are you using WiFi? If so, how many other networks are visible nearby?",
+        "Persistent packet loss may indicate line issues. Could you check your modem's error logs for CRC or FEC errors?"
+      ],
+      "speech_rate": "slow"
+    },
+
+    {
+      "tag": "nat_issues",
+      "patterns": [
+        "Double NAT detected", "Strict NAT type",
+        "Gaming NAT issues", "UPnP not working",
+        "Port forwarding failed", "Can't host servers",
+        "NAT configuration problems"
+      ],
+      "responses": [
+        "NAT issues often affect gaming and hosting. Is your modem in bridge mode, or is it performing NAT along with your router?",
+        "For NAT problems, we should check your network topology. Do you have multiple routers connected in series?",
+        "Let's check your NAT configuration. Could you access your router's admin page and look for NAT or DMZ settings?"
+      ],
+      "speech_rate": "slow"
+    },
+
+    {
+      "tag": "ip_conflict",
+      "patterns": [
+        "IP address conflict", "Duplicate IP warning",
+        "Network address problem", "DHCP issues",
+        "Can't get IP address", "Self-assigned IP",
+        "169.254 address", "APIPA address"
+      ],
+      "responses": [
+        "IP conflicts disrupt connectivity. Could you try releasing and renewing your IP address? On Windows: 'ipconfig /release' then 'ipconfig /renew'",
+        "For persistent IP issues, we should check your DHCP scope. How many devices are on your network compared to your DHCP range size?",
+        "Let's check for IP conflicts. Could you try assigning a static IP outside your DHCP range temporarily to test?"
+      ],
+      "speech_rate": "slow"
+    },
+
+    {
+      "tag": "vpn_problems",
+      "patterns": [
+        "VPN not connecting", "Slow VPN speeds",
+        "VPN drops frequently", "Can't access through VPN",
+        "Split tunnel issues", "VPN authentication failed",
+        "Corporate network access"
+      ],
+      "responses": [
+        "VPN issues depend on configuration. Are you trying to connect to a work/school VPN or personal VPN service?",
+        "For VPN problems, let's check basic connectivity. Can you access normal internet when the VPN fails?",
+        "VPNs often have protocol options. Have you tried switching between UDP and TCP in your VPN client settings?"
+      ],
+      "speech_rate": "slow"
+    },
+
+    {
+      "tag": "ipv6_issues",
+      "patterns": [
+        "IPv6 problems", "No IPv6 connectivity",
+        "IPv6 test failures", "Dual stack issues",
+        "IPv6 disabled", "Broken IPv6",
+        "IPv6 configuration"
+      ],
+      "responses": [
+        "IPv6 issues require specific checks. Could you visit test-ipv6.com and share the results?",
+        "For IPv6 problems, we should check your router's settings. Is IPv6 enabled in your router's admin panel?",
+        "Let's verify IPv6 at different levels. Can you ping6 an IPv6 address like 2606:4700:4700::1111?"
+      ],
+      "speech_rate": "slow"
+    },
+
+    {
+      "tag": "qos_config",
+      "patterns": [
+        "Quality of Service", "Prioritize traffic",
+        "Bandwidth allocation", "Traffic shaping",
+        "Gaming prioritization", "Video call quality",
+        "Optimize bandwidth"
+      ],
+      "responses": [
+        "QoS configuration can optimize performance. What devices/services would you like to prioritize (gaming, video calls, etc.)?",
+        "For QoS setup, we'll need your router model. Most modern routers have QoS settings under 'Advanced' or 'Traffic Management'",
+        "Effective QoS requires knowing your bandwidth. Could you run a speed test so we can set appropriate limits?"
+      ],
+      "speech_rate": "slow"
+    },
+
+    {
+      "tag": "firmware_update",
+      "patterns": [
+        "Router needs update", "Firmware outdated",
+        "Security patches", "Update network equipment",
+        "Router vulnerabilities", "Firmware upgrade"
+      ],
+      "responses": [
+        "Firmware updates are crucial for security. Could you access your router's admin page and check the firmware version?",
+        "Before updating firmware, always back up your settings. Do you know how to access your router's admin interface?",
+        "Let's check for updates carefully. First, what's your router's make and model? We'll find the correct firmware."
+      ],
+      "speech_rate": "slow"
+    },
+
+    {
+      "tag": "default",
+      "patterns": [],
+      "responses": [
+        "I want to make sure I understand your network issue. Could you describe it in different words?",
+        "I specialize in technical network troubleshooting. Could you specify whether this is about connectivity, speed, or another issue?",
+        "Let me clarify - are you having problems with your internet connection, local network, or a specific service?"
+      ],
+      "speech_rate": "slow"
+    }
+  ]
+}
