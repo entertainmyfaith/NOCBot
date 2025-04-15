@@ -10,8 +10,8 @@ You must have to create accounts for the services used.
 - Since our flask application is internally hosted, zrok is required to expose the internal flask application to public endpoint creating a HTTPs tunnel so that twilio can connect to it. Twilio requires public endpoint to route the call. Here are the steps:
     - create and set up a zork account using this guide:
     - once done, copy the URL and paste it into Twilio's configuration page on both Calls and Messages. The image is shown below:
-    [!Twilio Voice](../images/voice_service.png)
-    [!Twilio Voice](../images/messaging_service.png)
+    ![Twilio Voice](images/voice_service.png)
+    ![Twilio Voice](images/messaging_service.png)
     - now, you should be able to run the program by calling the number that you got in Twilio. 
 
 3. **ConnectWise API (Optional)**
@@ -47,4 +47,4 @@ For the simplicity sake, we compiled all of our modules to one single python fil
 
 
 If the environment was setup correct, all the services account were created and activated, API keys were properly put into right place and all the libraries were installed correctly, the program should run and look something like this:
-[!Twilio Voice](../images/program_execution.png)
+![Twilio Voice](images/program_execution.png)
