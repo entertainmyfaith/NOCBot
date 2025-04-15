@@ -48,3 +48,8 @@ For the simplicity sake, we compiled all of our modules to one single python fil
 
 If the environment was setup correct, all the services account were created and activated, API keys were properly put into right place and all the libraries were installed correctly, the program should run and look something like this:
 ![Twilio Voice](images/program_execution.png)
+
+
+Once the program is running, you can call the Twilio number from your verified number in Twilio and our NOCBot should answer your call.
+
+For any sort of assistance, please email at: kcsrijal@protonmail.com
