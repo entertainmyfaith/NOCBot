@@ -1,5 +1,5 @@
-## NOCBOT: AI-Powered Voice Assistant for ISP Customer Support
-NOCBOT is an innovative project designed to revolutionize after-hours customer support for Internet Service Providers (ISPs). By leveraging AI automation, NOCBOT aims to replace costly third-party call centers with an intelligent voice assistant, providing immediate and effective support to customers regardless of the time of day or their service level. This initiative seeks to enhance customer experience, particularly in rural areas, while significantly reducing operational overhead for ISPs.
+## NOCBot: AI-Powered Voice Assistant for ISP Customer Support
+NOCBot is an innovative project designed to revolutionize after-hours customer support for Internet Service Providers (ISPs). By leveraging AI automation, NOCBot aims to replace costly third-party call centers with an intelligent voice assistant, providing immediate and effective support to customers regardless of the time of day or their service level. This initiative seeks to enhance customer experience, particularly in rural areas, while significantly reducing operational overhead for ISPs.
 
 ### Note before trying to run the program:
 You must have to create accounts for the services used.
