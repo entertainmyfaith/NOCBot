@@ -36,7 +36,7 @@ We have a test database pushed into the GitHub called ***â€œcustomers_db.sqliteâ
 ### Steps to run the program:
 1. Clone the website.
     - git clone https://github.com/entertainmyfaith/NOCBot.git
-    - cd NocBot
+    - cd NOCBot
 
 2. Create a python virtual environment on your PC:
     - python -m venv my_venv
